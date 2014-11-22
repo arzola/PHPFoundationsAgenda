@@ -17,6 +17,7 @@
                     <th>Telefono</th>
                     <th>Twitter</th>
                     <th>Facebook</th>
+                    <th>Linkedin</th>
                 </tr>
             </table>
         </div>
