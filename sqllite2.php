@@ -6,7 +6,4 @@
  * and open the template in the editor.
  */
 
-$hola = 'Bety';
-echo "Hola";
-
-?>
+$db = new SQLite3('data/db.sqllite');
