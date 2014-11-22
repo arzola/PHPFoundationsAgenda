@@ -16,6 +16,7 @@
                     <th>Apellido</th>
                     <th>Telefono</th>
                     <th>Twitter</th>
+                    <th>Linkedin</th>
                     <th>Facebook</th>
                 </tr>
             </table>
