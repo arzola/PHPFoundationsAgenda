@@ -5,14 +5,15 @@ ini_set('display_errors', '1');
 
 require_once 'Agenda.php';
 require_once 'MySQLAdapter.php';
-require_once 'SQLiteAdapter.php';
-require_once 'FileAdapter.php';
+//require_once 'SQLiteAdapter.php';
+//require_once 'FileAdapter.php';
 
 
-$mysql = new MySQLAdapter('127.0.0.1','root','','agenda');
-$sqlite = new SQLiteAdapter('db.sqlite');
-$files = new FileAdapter('data/db.csv');
-$agenda = new Agenda($files);
+$mysql = new MySQLAdapter(['127.0.0.1','root','','agenda']);
+//$sqlite = new SQLiteAdapter('db.sqlite');
+//$files = new FileAdapter('data/db.csv');
+$agenda = new Agenda($mysql);
+//$agenda -> find(['campo' => 'nombre', 'busqueda' => 'Karin']);
 ?>
 <html> 
     <head>
