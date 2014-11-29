@@ -5,14 +5,25 @@ ini_set('display_errors', '1');
 
 require_once 'Agenda.php';
 require_once 'MySQLAdapter.php';
-require_once 'SQLiteAdapter.php';
-require_once 'FileAdapter.php';
+//require_once 'SQLiteAdapter.php';
+//require_once 'FileAdapter.php';
 
 
-$mysql = new MySQLAdapter('127.0.0.1','root','','speculum');
-$sqlite = new SQLiteAdapter('db.sqlite');
-$files = new FileAdapter('data/db.csv');
-$agenda = new Agenda($files);
+$mysql = new MySQLAdapter(['127.0.0.1','root','','agenda']);
+//$sqlite = new SQLiteAdapter('db.sqlite');
+//$files = new FileAdapter('data/db.csv');
+$data = ['id'=>3,'parametros' =>['nombre'=>'Pedro','edad'=>'25']];
+$where = array('campo'=>'apellido_materno','busqueda'=>'Lima');
+$id = 8;
+
+$agenda = new Agenda($mysql);
+//$agenda->add(['nombre'=>'Kitzita','apellido_paterno'=>'Abarca','apellido_materno'=>'Alfonso','edad'=>'25']);
+//$agenda->update($data);
+//$agenda->delete($id);
+$agenda->find($where);
+//$busqueda = $agenda->fetchAll();
+//$busqueda = $agenda->find($where);
+
 ?>
 <html> 
     <head>
