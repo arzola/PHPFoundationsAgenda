@@ -9,7 +9,7 @@ require_once 'SQLiteAdapter.php';
 require_once 'FileAdapter.php';
 
 
-$mysql = new MySQLAdapter('127.0.0.1','root','','speculum');
+$mysql = new MySQLAdapter('127.0.0.1','root','','agenda');
 $sqlite = new SQLiteAdapter('db.sqlite');
 $files = new FileAdapter('data/db.csv');
 $agenda = new Agenda($files);

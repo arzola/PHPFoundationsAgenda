@@ -6,7 +6,7 @@ class MySQLAdapter implements Storage {
     private $_data;
 
     function __construct($params) {
-        $this->_connection = new mysqli("127.0.0.1", "root", "", "speculum");
+        $this->_connection = new mysqli("127.0.0.1", "root", "", "agenda");
         $this->_data = array();
     }
 
