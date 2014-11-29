@@ -7,12 +7,22 @@ require_once 'Agenda.php';
 require_once 'MySQLAdapter.php';
 require_once 'SQLiteAdapter.php';
 require_once 'FileAdapter.php';
+#. "(id_contacto, nombre, apellido_p, apellido_m, edad) "
+#$data=array('id_contacto'=>'1', 'nombre'=> 'Jose Luis', 'apellido_p'=>'Mendez', 'apellido_m'=>'Perez', 'edad'=>'26');
+$data = array('id'=>1, 
+    'parametros'=>
+    array('nombre'=>'Juan', 'apellido_p'=>'Lazaro', 'apellido_m'=>'Gutierrez', 'edad'=>'31'));
+$where = array('campo'=>'nombre', 'busqueda'=>'Jose Luis');
 
-
-$mysql = new MySQLAdapter('127.0.0.1','root','','speculum');
+#$mysql = new MySQLAdapter('127.0.0.1','root','','speculum');
 $sqlite = new SQLiteAdapter('db.sqlite');
-$files = new FileAdapter('data/db.csv');
-$agenda = new Agenda($files);
+#$files = new FileAdapter('data/db.csv');
+$agenda = new Agenda($sqlite);
+#$agenda->add($data);
+#$agenda->update($data);
+#$agenda->find($where);
+
+
 ?>
 <html> 
     <head>
