@@ -14,19 +14,19 @@ class Agenda{
      */
     
     public function add($data){
-        //return $this->datasource->fetchAll($data);
+        return $this->_datasource->add($data);
     }
     
     public function update($id){
-        //return $this->datasource->fetchAll($id);
+        return $this->_datasource->update($id);
     }
     
     public function find($where){
-        //return $this->datasource->fetchAll($where);
+        return $this->_datasource->find($where);
     }
     
     public function delete($id){
-       // return $this->datasource->fetchAll($id);
+       return $this->_datasource->delete($id);
     }
     
     public function fetchAll(){
