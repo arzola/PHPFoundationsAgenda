@@ -8,7 +8,7 @@ require_once 'Agenda.php';
 require_once 'MySQLAdapter.php';
 require_once 'SQLiteAdapter.php';
 require_once 'FileAdapter.php';
-$mysql = new MySQLAdapter(array("67.43.1.124", 'icodeos_dipak', '123123qwe!!', 'icodeos_dipak_agenda'));
+$mysql = new MySQLAdapter(array("loacalhost", 'dipak', 'password', 'agenda'));
 $sqlite = new SQLiteAdapter('db.sqlite');
 $files = new FileAdapter('data/db.csv');
 $agenda = new Agenda(${$_SESSION['storage']});
