@@ -135,7 +135,7 @@ $agenda = new Agenda(${$_SESSION['storage']});
                         E.preventDefault();
                         $('#campo').val($(this).attr('rel'));
                     });
-                    $('#ok').click(function(e){
+                    $('#ok').click(function(event){
                        var params = {};
                        params['campo'] = ($('#campo').val()!=='')?$('#campo').val() : 'nombre';
                        params['query'] = $('#query').val();
